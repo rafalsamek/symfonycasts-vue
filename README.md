@@ -22,6 +22,25 @@ composer install
 You may alternatively need to run `php composer.phar install`, depending
 on how you installed Composer.
 
+**Create docker database container and run it**
+
+```
+./bin/console make:docker:database
+```
+
+Adjust newly created docker-compose.yaml file with .env DATABASE_URL section
+Also you can expose mysql on different port e.g. 3307             
+
+```
+- '3307:3306'
+```
+
+Then start the container with command:
+
+```
+docker-compose up -d
+```
+
 **Install node dependencies**
 
 Make sure you have [Yarn installed](https://yarnpkg.com/en/docs/install) and then run:
