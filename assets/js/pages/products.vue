@@ -66,11 +66,10 @@ export default {
 };
 </script>
 
+<style lang="scss">
+@import '../../scss/components/light-component';
 
-<style>
 .sidebar {
-    border: 1px solid #efefee;
-    box-shadow: 0px 0px 7px 4px #efefee;
-    border-radius: 5px;
+    @include light-component;
 }
 </style>
