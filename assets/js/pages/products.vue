@@ -47,7 +47,7 @@
 
                 <div class="row">
                     <span class="p-3">
-                        <legend-component />
+                        <legend-component title="TODO PUT LEGEND HERE"/>
                     </span>
                 </div>
             </div>
