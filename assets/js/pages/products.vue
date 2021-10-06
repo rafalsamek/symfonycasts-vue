@@ -47,7 +47,7 @@
 
                 <div class="row">
                     <span class="p-3">
-                        <legend-component title="TODO PUT LEGEND HERE"/>
+                        <legend-component v-bind:title="legend"/>
                     </span>
                 </div>
             </div>
