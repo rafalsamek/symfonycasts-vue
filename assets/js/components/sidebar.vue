@@ -5,6 +5,7 @@
     >
         <h5 class="text-center">
             Categories
+            {{ _uid }}
         </h5>
 
         <ul class="nav flex-column mb4">
@@ -56,6 +57,15 @@ export default {
                 },
             ],
         };
+    },
+    created() {
+        console.log(this);
+    },
+    props: {
+        testProp: {
+            type: String,
+            default: 'A am the default value',
+        },
     },
     methods: {
         toggleCollapsed() {
