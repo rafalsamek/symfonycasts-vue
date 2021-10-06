@@ -47,7 +47,7 @@
 
                 <div class="row">
                     <span class="p-3">
-                        <legend-component v-bind:title="legend"/>
+                        <legend-component v-bind:title="legend + ' this is really JavaScript!'"/>
                     </span>
                 </div>
             </div>
