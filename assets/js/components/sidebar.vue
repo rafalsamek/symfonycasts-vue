@@ -5,7 +5,6 @@
     >
         <h5 class="text-center">
             Categories
-            {{ _uid }}
         </h5>
 
         <ul class="nav flex-column mb4">
@@ -59,7 +58,7 @@ export default {
         };
     },
     created() {
-        console.log(this);
+        console.log(this, this.categories);
     },
     props: {
         testProp: {
