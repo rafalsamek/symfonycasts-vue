@@ -3,6 +3,12 @@
         <div class="col-12">
             <div class="mt-4">
                 <loading v-show="loading" />
+
+                <h5
+                    v-show="!loading && products.length === 0"
+                >
+                    Whoopisie Daisy, no products found!
+                </h5>
             </div>
         </div>
 
