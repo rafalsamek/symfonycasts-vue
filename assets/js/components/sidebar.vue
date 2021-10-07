@@ -45,7 +45,6 @@
 
 <script>
 import axios from 'axios';
-import { getCurrentCategoryId } from '@/services/page-context';
 
 export default {
     name: 'Sidebar',
@@ -54,16 +53,15 @@ export default {
             type: Boolean,
             required: true,
         },
+        currentCategoryId: {
+            type: String,
+            default: null,
+        },
     },
     data() {
         return {
             categories: [],
         };
-    },
-    computed: {
-        currentCategoryId() {
-            return getCurrentCategoryId();
-        },
     },
     async created() {
         const response = await axios.get('/api/categories');
