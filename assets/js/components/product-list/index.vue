@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
             <div class="mt-4">
-                <loading v-show="products.length === 0"/>
+                <loading v-show="products.length === 0" />
             </div>
         </div>
 
