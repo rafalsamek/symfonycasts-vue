@@ -8,7 +8,10 @@
             </div>
         </div>
 
-        <product-list :products="products" />
+        <product-list
+            :products="products"
+            :loading="loading"
+        />
 
         <div class="row">
             <span class="p-3">
@@ -48,19 +51,22 @@ export default {
             params.category = this.currentCategoryId;
         }
 
-        this.loading = false;
+        this.loading = true;
 
+        let response;
         try {
-            const response = await axios.get('/api/products', {
+            response = await axios.get('/api/products', {
                 params,
             });
 
             this.loading = false;
-
-            this.products = response.data['hydra:member'];
         } catch (e) {
             this.loading = false;
+
+            return;
         }
+
+        this.products = response.data['hydra:member'];
     },
 };
 </script>
