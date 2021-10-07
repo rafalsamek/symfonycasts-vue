@@ -19,7 +19,7 @@
                 >
                     <a
                         class="nav-link"
-                        :href="'/category/'+category.id"
+                        :href="`/category/${category.id}`"
                     >
                         {{ category.name }}
                     </a>
